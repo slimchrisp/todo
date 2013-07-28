@@ -1,0 +1,15 @@
+%div{class: "navbar"}
+  %div{class: "navbar-inner"}
+    / .span9
+    = form_for @list, html: {class: "navbar-form pull-left"} do |f|
+      = f.text_field :title, class: "span2"
+      = f.submit class: "btn", value: "Create List"
+      //  = f.error_messages
+
+#lists
+  - @lists.each_with_index do |list, index|
+    %div{:class => cycle('list row odd', 'list row even')}
+      .span1 
+        = index + 1
+      .span8 
+        = list.title

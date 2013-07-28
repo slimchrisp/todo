@@ -7,3 +7,10 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # Environment variables (ENV['...']) can be set in the file config/application.yml.
 # See http://railsapps.github.io/rails-environment-variables.html
+List.destroy_all
+
+5.times do |index|
+  List.create do |list|
+    list.title = "List #{index}"
+  end
+end

@@ -33,4 +33,5 @@ group :test do
   gem 'capybara'
   gem 'database_cleaner'
   gem 'email_spec'
+  gem 'faker'
 end
